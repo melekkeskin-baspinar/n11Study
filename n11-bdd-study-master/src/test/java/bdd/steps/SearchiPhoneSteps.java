@@ -81,8 +81,8 @@ public class SearchiPhoneSteps extends UIInteractionSteps {
   }
 
   public void checkAddedProducts() {
-    String lastCheckOutProductHref = thenReturnElementList(HomePage.CHECKOUT_FIRST_PRODUCT).get(1).getAttribute("href");
-    String firstCheckOutProductHref = thenReturnElementList(HomePage.CHECKOUT_FIRST_PRODUCT).get(0).getAttribute("href");
+    String lastCheckOutProductHref = thenReturnElementList(HomePage.CHECKOUT_FIRST_PRODUCT).get(0).getAttribute("href");
+    String firstCheckOutProductHref = thenReturnElementList(HomePage.CHECKOUT_FIRST_PRODUCT).get(1).getAttribute("href");
     Assert.assertEquals(getFirstItemHref(), firstCheckOutProductHref);
     Assert.assertEquals(getLastItemHref(), lastCheckOutProductHref);
   }
